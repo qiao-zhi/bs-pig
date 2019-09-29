@@ -1,9 +1,8 @@
 package cn.qs.mapper.baseinfo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import cn.qs.bean.baseinfo.Farm;
+import cn.qs.mapper.BaseCRUDMapper;
 
-public interface FarmMapper extends JpaRepository<Farm, Integer> {
+public interface FarmMapper extends BaseCRUDMapper<Farm, Integer> {
 
 }

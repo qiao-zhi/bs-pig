@@ -1,7 +1,5 @@
 package cn.qs.bean.baseinfo;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 
 import cn.qs.bean.AbstractSequenceEntity;
@@ -16,7 +14,7 @@ public class Piglet extends AbstractSequenceEntity {
 
 	private String weight;
 
-	private Date birthday;
+	private String birthday;
 
 	private Integer age;
 
@@ -42,11 +40,11 @@ public class Piglet extends AbstractSequenceEntity {
 		this.weight = weight;
 	}
 
-	public Date getBirthday() {
+	public String getBirthday() {
 		return birthday;
 	}
 
-	public void setBirthday(Date birthday) {
+	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
 

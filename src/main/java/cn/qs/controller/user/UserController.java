@@ -1,7 +1,6 @@
 package cn.qs.controller.user;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +29,7 @@ import cn.qs.utils.MD5Utils;
 
 @Controller
 @RequestMapping("user")
-public class UserController extends AbstractController {
+public class UserController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -40,6 +39,10 @@ public class UserController extends AbstractController {
 	@RequestMapping("/user-list")
 	public String member_list() {
 		return getViewPath("user-list");
+	}
+
+	private String getViewPath(String string) {
+		return getViewBasePath() + "/" + string;
 	}
 
 	@RequestMapping("/user-add")
@@ -128,7 +131,6 @@ public class UserController extends AbstractController {
 		return JSONResultUtil.ok();
 	}
 
-	@Override
 	public String getViewBasePath() {
 		return "user";
 	}
