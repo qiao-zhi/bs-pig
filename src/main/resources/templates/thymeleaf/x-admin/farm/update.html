@@ -101,6 +101,33 @@
           </div>          
           
           <div class="layui-form-item">
+              <label for="L_email" class="layui-form-label">
+                  <span class="x-red">*</span>会员等级
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" name="remark1"  autocomplete="off" class="layui-input" th:field="${bean.remark1}"/>
+              </div>
+          </div>
+          
+          <div class="layui-form-item">
+              <label for="L_email" class="layui-form-label">
+                  <span class="x-red">*</span>检疫合格率
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" name="remark2"  autocomplete="off" class="layui-input" th:field="${bean.remark2}"/>
+              </div>
+          </div>
+          
+          <div class="layui-form-item">
+              <label for="L_email" class="layui-form-label">
+                  <span class="x-red">*</span>瘟疫率
+              </label>
+              <div class="layui-input-inline">
+                  <input type="text" name="remark3"  autocomplete="off" class="layui-input" th:field="${bean.remark3}"/>
+              </div>
+          </div>
+          
+          <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
               <button  class="layui-btn" lay-filter="add" lay-submit="">

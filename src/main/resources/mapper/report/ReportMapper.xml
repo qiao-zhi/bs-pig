@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.qs.mapper.report.ReportMapper">
+	<select id="report1" resultType="map" parameterType="map">
+		select *,
+		CAST(remark1 AS UNSIGNED) + CAST(remark2 AS UNSIGNED) as remark12,
+		CAST(remark1 AS UNSIGNED) + CAST(remark3 AS UNSIGNED) as
+		remark13 from
+		farm
+	</select>
+</mapper>

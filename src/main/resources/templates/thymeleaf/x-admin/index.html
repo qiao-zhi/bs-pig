@@ -196,6 +196,58 @@
                 </ul>
             </li>
             
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#59042;</i>
+                    <cite>信息分析</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li th:if="${session.user.roles} eq '系统管理员'">
+                        <a _href="/report/report1.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>合格率折线图</cite>
+                        </a>
+                    </li >
+                    <li th:if="${session.user.roles} eq '系统管理员'">
+                        <a _href="/report/report2.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>合格率饼图</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="/report/report3.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>瘟疫饼图</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="/report/report4.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>检疫合格率递减</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="/report/report5.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>瘟疫率递减</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="/report/report6.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>检疫合格率前三</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="/report/report7.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>瘟疫率前三</cite>
+                        </a>
+                    </li >
+                </ul>
+            </li>
+            
         </ul>
       </div>
     </div>

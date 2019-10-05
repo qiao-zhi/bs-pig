@@ -29,10 +29,19 @@ public class Farm extends AbstractSequenceEntity {
 
 	private String managerPhone;
 
+	/**
+	 * 会员等级
+	 */
 	private String remark1;
 
+	/**
+	 * 检疫合格率
+	 */
 	private String remark2;
 
+	/**
+	 * 瘟疫率
+	 */
 	private String remark3;
 
 	public String getName() {
