@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8"/>
-	<title th:text="${productName}">旅游网</title>
+	<title th:text="${productName}">溯源系統</title>
 	<meta name="renderer" content="webkit|ie-comp|ie-stand"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -27,7 +27,7 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="./index.html" th:text="${productName}">旅游网</a></div>
+        <div class="logo"><a href="./index.html" th:text="${productName}">溯源系统</a></div>
         <div class="left_open">
             <i title="展开左侧栏" class="iconfont">&#xe699;</i>
         </div>
@@ -199,6 +199,28 @@
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#59042;</i>
+                    <cite>金融管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li th:if="${session.user.roles} eq '系统管理员'">
+                        <a _href="/agree/list.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>协议列表</cite>
+                        </a>
+                    </li >
+                    <li>
+                        <a _href="/charge/list.html">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>收费列表</cite>
+                        </a>
+                    </li >
+                </ul>
+            </li>
+            
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#59042;</i>
                     <cite>信息分析</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
@@ -271,7 +293,7 @@
     <!-- 中部结束 -->
     <!-- 底部开始 -->
     <div class="footer">
-        <div class="copyright">Copyright ©2019 qs All Rights Reserved</div>  
+        <div class="copyright">GTWH</div>  
     </div>
     <!-- 底部结束 -->
     <script>

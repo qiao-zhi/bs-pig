@@ -27,79 +27,34 @@
         
        	  <input type="hidden" th:field="${bean.id}"/>
        	  
-          <div class="layui-form-item">
+       	  <div class="layui-form-item">
               <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>姓名
+                  <span class="x-red">*</span>收费协议
               </label>
               <div class="layui-input-inline">
-                  <input type="text" id="L_name" name="name" lay-verify="required" th:field="${bean.name}"
+                  <input type="text" id="L_name" name="fee" lay-verify="required" th:field="${bean.fee}"
                   autocomplete="off" class="layui-input"/>
               </div>
           </div>
           
           <div class="layui-form-item">
               <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>地址
+                  <span class="x-red">*</span>退款条约
               </label>
               <div class="layui-input-inline">
-                  <input type="text" name="address" th:field="${bean.address}" autocomplete="off" class="layui-input"/>
+                  <input type="text" name="refuse" autocomplete="off" class="layui-input" th:field="${bean.refuse}"/>
               </div>
           </div>
           
           <div class="layui-form-item">
               <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>网址
+                  <span class="x-red">*</span>收费税收
               </label>
               <div class="layui-input-inline">
-                  <input type="text" name="network"  autocomplete="off" th:field="${bean.network}"  class="layui-input"/>
+                  <input type="text" name="taxi"  autocomplete="off" class="layui-input" th:field="${bean.taxi}"/>
               </div>
           </div>
-          
-          <div class="layui-form-item">
-              <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>公司编码
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" name="companycode"  autocomplete="off"  th:field="${bean.companycode}" class="layui-input"/>
-              </div>
-          </div>
-          
-          <div class="layui-form-item">
-              <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>类型
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" name="type"  autocomplete="off" class="layui-input" th:field="${bean.type}"/>
-              </div>
-          </div>
-          
-          <div class="layui-form-item">
-              <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>管理者姓名
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" name="managerName"  autocomplete="off" class="layui-input" th:field="${bean.managerName}"/>
-              </div>
-          </div>
-          
-          <div class="layui-form-item">
-              <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>管理者工号
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" name="managerNumber"  autocomplete="off" class="layui-input" th:field="${bean.managerNumber}"/>
-              </div>
-          </div>
-          
-          <div class="layui-form-item">
-              <label for="L_email" class="layui-form-label">
-                  <span class="x-red">*</span>管理者电话
-              </label>
-              <div class="layui-input-inline">
-                  <input type="text" name="managerPhone"  autocomplete="off" class="layui-input" th:field="${bean.managerPhone}"/>
-              </div>
-          </div>          
-          
+       	  
           <div class="layui-form-item">
               <label for="L_repass" class="layui-form-label">
               </label>
@@ -124,7 +79,7 @@
           //监听提交
           form.on('submit(add)', function(data){
        	    //异步提交数据
-       	    $.post("/abattoir/doUpdate.html",data.field,function(response){
+       	    $.post("./doUpdate.html",data.field,function(response){
        	    	if(response.success == true){
        	    	  layer.msg("修改成功", {icon: 6},function () {
                       // 获得frame索引
